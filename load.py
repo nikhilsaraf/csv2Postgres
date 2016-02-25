@@ -13,6 +13,7 @@ tablename = sys.argv[3]
 tablename = tablename.lower()
 print 'tablename:', tablename
 
+# the logic below has been taken from this stack overflow post: http://stackoverflow.com/a/29722393/1484710
 df = pd.read_csv(filename)
 #postgres doesn't like capitals or spaces
 df.columns = [c.lower() for c in df.columns]
